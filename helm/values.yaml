@@ -1,14 +1,19 @@
-# Default values for test-chart.
+# Default values for helm.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+
+database:
+  volume:
+    storageClassName: standard
+  rootPassword: vivek
+application:
+  name: ''
 
 replicaCount: 1
 
 image:
-  repository: rocker/geospatial
+  repository: nginx
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "4.0.3"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -21,9 +26,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
-
-podAnnotations: {}
+  name:
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -64,13 +67,6 @@ resources: {}
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 
