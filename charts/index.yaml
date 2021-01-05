@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  vault:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-01-05T15:22:35.529836-05:00"
+    description: A Helm chart for vault projects
+    digest: 2c9b4a2b1d6059d3498712e79473b0375ab3a170a872d330090383327c7e480d
+    name: vault
+    type: application
+    urls:
+    - vault-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-01-05T15:22:35.529218-05:00"
